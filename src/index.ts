@@ -8,8 +8,8 @@ program.requiredOption('-i, --input <path>', 'input file path')
 program.requiredOption('-o, --output <path>', 'output file path')
 program.parse()
 
-const inputPath = path.join(__dirname, '../', program.opts().input)
-const outputPath = path.join(__dirname, '../', program.opts().output)
+const inputPath = path.join(process.cwd(), program.opts().input)
+const outputPath = path.join(process.cwd(), program.opts().output)
 const markdownText = fs.readFileSync(inputPath).toString()
 
 ;(async function () {
