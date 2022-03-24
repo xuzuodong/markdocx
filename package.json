@@ -1,0 +1,31 @@
+{
+  "name": "markdocx",
+  "version": "0.0.1",
+  "description": "Convert markdown to docx, using node.js. ",
+  "license": "MIT",
+  "author": "Ted Xu <hi@xzd.me>",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "preferGlobal": true,
+  "scripts": {
+    "dev": "tsup src/index.ts --watch --onSuccess \"./bin/markdocx.js -i ./examples/test.md -o ./examples/test.docx\"",
+    "build": "rimraf dist && tsup src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^9.1.0",
+    "docx": "^7.2.0",
+    "marked": "^4.0.7"
+  },
+  "devDependencies": {
+    "@types/marked": "^4.0.1",
+    "rimraf": "^3.0.2",
+    "tsup": "^5.12.1",
+    "typescript": "^4.6.2",
+    "vitest": "^0.7.10"
+  },
+  "keywords": [
+    "markdown",
+    "docx",
+    "convert"
+  ]
+}
