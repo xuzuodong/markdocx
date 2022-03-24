@@ -25,7 +25,7 @@ function createInline(token: Token, parentTypes: string[]): TextRun | ImageRun {
             if (/^http/.test(href)) {
                 // TODO: download image and parse
             } else {
-                const outputDir = path.dirname(path.join(process.cwd(), program.opts().output))
+                const outputDir = path.dirname(path.join(process.cwd(), program.opts().input))
                 src = path.join(outputDir, href)
             }
 
