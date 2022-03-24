@@ -1,6 +1,6 @@
 {
   "name": "markdocx",
-  "version": "0.0.1-alpha.5",
+  "version": "0.0.1-alpha.6",
   "description": "Convert markdown to docx, using node.js. ",
   "license": "MIT",
   "author": "Ted Xu <hi@xzd.me>",
